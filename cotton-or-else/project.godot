@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Cotton Or Else"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.5", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+MusicManager="*res://MusicManager.cs"
 
 [dotnet]
 
@@ -20,5 +24,6 @@ project/assembly_name="Cotton Or Else"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
