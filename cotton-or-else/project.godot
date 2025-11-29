@@ -16,7 +16,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-MusicManager="*res://MusicManager.cs"
+MusicManager="*res://scenes/MusicManager.tscn"
 
 [dotnet]
 

@@ -7,7 +7,7 @@ public partial class OptionsMenu : Control
     [Export] public AudioStream Music2;
     [Export] public AudioStream Music3;
 
-    private int selectedIndex = -1; // No selection yet
+    private int selectedIndex = -1;
 
     private AudioStreamPlayer previewPlayer;
 
@@ -15,9 +15,9 @@ public partial class OptionsMenu : Control
     {
         previewPlayer = GetNode<AudioStreamPlayer>("PreviewPlayer");
 
-        GetNode<Button>("MusicOption1").Pressed += () => OnMusicOptionPressed(0);
-        GetNode<Button>("MusicOption2").Pressed += () => OnMusicOptionPressed(1);
-        GetNode<Button>("MusicOption3").Pressed += () => OnMusicOptionPressed(2);
+        GetNode<Button>("HBoxContainer/MusicOption1").Pressed += () => OnMusicOptionPressed(0);
+        GetNode<Button>("HBoxContainer/MusicOption2").Pressed += () => OnMusicOptionPressed(1);
+        GetNode<Button>("HBoxContainer/MusicOption3").Pressed += () => OnMusicOptionPressed(2);
 
         GetNode<Button>("ConfirmButton").Pressed += OnConfirmPressed;
     }
@@ -42,19 +42,26 @@ public partial class OptionsMenu : Control
         previewPlayer.Play();
     }
 
-    private void OnConfirmPressed()
-    {
-        if (selectedIndex == -1)
+            private void OnConfirmPressed()
         {
-            GD.Print("No music selected!");
-            return;
-        }
-
-        // Save the selected music so the Main Menu or game can load it
-        MusicManager.SelectedMusic = selectedIndex;
-
-        // Return to the Main Menu scene
-        GetTree().ChangeSceneToFile("res://MainMenu.tscn");
+            if (selectedIndex == -1)
+    {
+        GD.Print("No music selected!");
+        return;
     }
-    
+
+    // Access the autoload singleton MusicManager
+    MusicManager mm = (MusicManager)GetNode("/root/MusicManager");
+
+    if (mm != null)
+    {
+        mm.SelectedMusic = selectedIndex;
+        GD.Print("SelectedMusic set to: " + mm.SelectedMusic);
+    }
+    else
+    {
+        GD.Print("MusicManager singleton not found!");
+    }
+            GetTree().ChangeSceneToFile("res://scenes/main_menu.tscn");
+}
 }
