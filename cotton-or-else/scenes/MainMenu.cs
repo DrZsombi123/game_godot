@@ -3,10 +3,16 @@ using System;
 
 public partial class MainMenu : Control
 {
+	
+
+
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-
+		
+		
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,16 +22,22 @@ public partial class MainMenu : Control
 
 	private void OnStartPressed()
     {
+		
+		
         GetTree().ChangeSceneToFile("res://scenes/world.tscn");
+		
     }
 
 	private void OnExitPressed()
     {
+		
         GetTree().Quit();
+		
     }
 
 	private void OnOptionsPressed()
     {
+		
         GetTree().ChangeSceneToFile("res://scenes/options_menu.tscn");
     }
 
