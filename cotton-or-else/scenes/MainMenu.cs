@@ -38,7 +38,7 @@ public partial class MainMenu : Control
 	private void OnOptionsPressed()
     {
 		
-        GetTree().ChangeSceneToFile("res://scenes/options_menu.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/OptionsMenu.tscn");
     }
 
 }

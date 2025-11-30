@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7x588gycucn2"]
+[gd_scene load_steps=4 format=3 uid="uid://b7x588gycucn2"]
 
 [ext_resource type="Script" uid="uid://dtq23pyvcqo1g" path="res://scenes/Game.cs" id="1_32lhk"]
 [ext_resource type="PackedScene" uid="uid://rwyotbhq27ou" path="res://scenes/Player.tscn" id="2_7g83o"]
+[ext_resource type="PackedScene" uid="uid://d2qepdq77jfhi" path="res://scenes/cotton.tscn" id="3_7g83o"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_32lhk")
@@ -10,3 +11,6 @@ script = ExtResource("1_32lhk")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
+
+[node name="Cotton" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(33, 3)

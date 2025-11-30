@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2qepdq77jfhi"]
+
+[ext_resource type="Script" uid="uid://but6j3gwk72b1" path="res://Cotton.cs" id="1_2tto2"]
+[ext_resource type="Texture2D" uid="uid://chy58gyuvvsus" path="res://assets/Cotton.png" id="2_uino5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j5h2g"]
+radius = 6.0
+
+[node name="Cotton" type="Area2D"]
+position = Vector2(17, 6)
+script = ExtResource("1_2tto2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(0.00817871, 0.008178709)
+texture = ExtResource("2_uino5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_j5h2g")

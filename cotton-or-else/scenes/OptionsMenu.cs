@@ -62,6 +62,6 @@ public partial class OptionsMenu : Control
     {
         GD.Print("MusicManager singleton not found!");
     }
-            GetTree().ChangeSceneToFile("res://scenes/main_menu.tscn");
+            GetTree().ChangeSceneToFile("res://scenes/MainMenu.tscn");
 }
 }
