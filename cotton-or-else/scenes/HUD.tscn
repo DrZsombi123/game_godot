@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://lqanuj7fo1am"]
+
+[ext_resource type="Script" uid="uid://cdo8qy1ukbko8" path="res://StopwatchHUD.cs" id="1_qpvh6"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_qpvh6")
+
+[node name="StopwatchLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.034722224
+anchor_bottom = 0.03549383
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
