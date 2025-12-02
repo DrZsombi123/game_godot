@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://obud7dsahfwm" path="res://assets/B3-FA353_AFRICA_M_20190919124013.jpg" id="2_wu84c"]
 [ext_resource type="FontFile" uid="uid://1uiuww4t5sul" path="res://assets/KiwiSoda.ttf" id="3_8ln24"]
 [ext_resource type="FontFile" uid="uid://dl54sk3b5fbq6" path="res://assets/GrapeSoda.ttf" id="3_wu84c"]
-[ext_resource type="AudioStream" uid="uid://ckywiay0pdlyu" path="res://assets/click.wav" id="6_rtw2f"]
+
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rtw2f"]
 texture = ExtResource("2_wu84c")
@@ -60,7 +60,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bqqt6")
-clickSound = ExtResource("6_rtw2f")
+
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
