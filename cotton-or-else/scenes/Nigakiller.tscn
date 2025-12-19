@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://t4167y1mulk5"]
+[gd_scene load_steps=28 format=3 uid="uid://t4167y1mulk5"]
 
+[ext_resource type="Script" uid="uid://337x7lmr05vo" path="res://scenes/Nigakiller.cs" id="1_57tpn"]
 [ext_resource type="Texture2D" uid="uid://bi2kfqgmhk5ie" path="res://assets/SpriteSheetNigaKiller.png" id="1_mbq1v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbq1v"]
@@ -234,6 +235,7 @@ animations = [{
 }]
 
 [node name="NPC" type="CharacterBody2D"]
+script = ExtResource("1_57tpn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false

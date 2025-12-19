@@ -3,7 +3,10 @@ using Godot;
 
 public partial class Player : CharacterBody2D
 {
-    [Export]private float MoveSpeed = 200f;
+    [Export]private float MoveSpeed = 100f;
+    [Export] public int MaxHP = 3;
+
+    public int CurrentHP { get; private set; }
 
     private AnimatedSprite2D animatedsprite;
 
@@ -12,6 +15,7 @@ public partial class Player : CharacterBody2D
     public override void _Ready()
     {
         animatedsprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+         CurrentHP = MaxHP;
     }
 
     private void HandleAnimation(Vector2 direction){
@@ -72,10 +76,7 @@ public partial class Player : CharacterBody2D
     }
 
 
-    public void PickupKey(){
-        HasKey = true;
-        GD.Print("player objektumban lefutott a pickupkey");
-    }
+    
 
     public override void _PhysicsProcess(double delta)
     {
@@ -83,4 +84,22 @@ public partial class Player : CharacterBody2D
         MoveAndSlide();
     }
 
+     public void TakeDamage(int amount)
+    {
+        CurrentHP -= amount;
+        CurrentHP = Mathf.Max(CurrentHP, 0);
+
+        GD.Print("Player HP:", CurrentHP);
+
+        if (CurrentHP <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        GD.Print("Player died");
+        
+    }
 }

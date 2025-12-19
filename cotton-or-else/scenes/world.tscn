@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dmr3dnwgb81nf"]
+[gd_scene load_steps=19 format=3 uid="uid://dmr3dnwgb81nf"]
 
 [ext_resource type="Script" uid="uid://dtq23pyvcqo1g" path="res://scenes/Game.cs" id="1_32lhk"]
 [ext_resource type="PackedScene" uid="uid://rwyotbhq27ou" path="res://scenes/Player.tscn" id="2_7g83o"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://v2c78nyx1l1a" path="res://assets/tileset_village_abandoned.png" id="5_jhx03"]
 [ext_resource type="Texture2D" uid="uid://d3cuhgg1md1ch" path="res://assets/tileset_wall_simple.png" id="6_o8fc1"]
 [ext_resource type="Texture2D" uid="uid://1hpuxfgcnh3h" path="res://assets/tileset_interior_floor.png" id="7_xo05s"]
+[ext_resource type="PackedScene" uid="uid://t4167y1mulk5" path="res://scenes/Nigakiller.tscn" id="11_e3hyu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dss4m"]
 texture = ExtResource("2_w7kh3")
@@ -1540,3 +1541,7 @@ zoom = Vector2(3, 3)
 position = Vector2(33, 3)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_d1c63")]
+
+[node name="NPC" parent="." instance=ExtResource("11_e3hyu")]
+Speed = 100.0
+AttackCooldown = 3.0
