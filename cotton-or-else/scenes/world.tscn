@@ -1454,7 +1454,31 @@ layer_1/tile_data = PackedInt32Array(-589816, 720900, 0, -589820, 4, 0, -1441789
 zoom = Vector2(3, 3)
 
 [node name="Cotton" parent="." instance=ExtResource("3_7g83o")]
-position = Vector2(33, 3)
+position = Vector2(77, -4)
+
+[node name="Cotton2" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(90, 63)
+
+[node name="Cotton3" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(-46, 168)
+
+[node name="Cotton4" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(129, 162)
+
+[node name="Cotton5" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(328, 72)
+
+[node name="Cotton6" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(88, -186)
+
+[node name="Cotton8" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(-93, -116)
+
+[node name="Cotton9" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(-122, -25)
+
+[node name="Cotton7" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(401, -104)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_d1c63")]
 
