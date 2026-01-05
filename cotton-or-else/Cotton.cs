@@ -5,7 +5,7 @@ public partial class Cotton : Area2D
 {
     [Signal]
     public delegate void CottonPickedEventHandler();
-    public int cottonsPicked = 0;
+    
     private bool playerNearby = false;
 
     private Player playerRef;
@@ -31,10 +31,10 @@ public partial class Cotton : Area2D
     }
 
     public override void _Process(double delta){
-        if(playerNearby && Input.IsActionPressed("ui_accept"))
+        if(playerNearby && Input.IsActionJustPressed("ui_accept"))
         {
-           cottonsPicked +=1;
-            GD.Print(cottonsPicked);
+           
+            
             GameEvents.Instance.EmitCottonPicked();
             QueueFree();
         }

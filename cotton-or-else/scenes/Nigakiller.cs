@@ -5,7 +5,7 @@ public partial class Nigakiller : CharacterBody2D
 {
     [Export] public float Speed = 80f;
     [Export] public float StopDistance = 18f;
-    [Export] public float AttackDistance = 24f;
+    [Export] public float AttackDistance = 48f;
     [Export] public float TimeBeforeAttack = 10f;
     [Export] public float AttackCooldown = 1.2f;
     [Export] public float AttackDuration = 0.4f;

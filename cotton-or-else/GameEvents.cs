@@ -4,7 +4,7 @@ using System;
 public partial class GameEvents : Node
 {
     public static GameEvents Instance { get; private set; }
-
+    public int TotalCottonPicked = 0;
     [Signal]
     public delegate void CottonPickedEventHandler();
 
@@ -16,5 +16,7 @@ public partial class GameEvents : Node
     public void EmitCottonPicked()
     {
         EmitSignal(SignalName.CottonPicked);
+        TotalCottonPicked++;
+        GD.Print(TotalCottonPicked);
     }
 }

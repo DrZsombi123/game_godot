@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dmr3dnwgb81nf"]
+[gd_scene load_steps=20 format=3 uid="uid://dmr3dnwgb81nf"]
 
 [ext_resource type="Script" uid="uid://dtq23pyvcqo1g" path="res://scenes/Game.cs" id="1_32lhk"]
 [ext_resource type="PackedScene" uid="uid://rwyotbhq27ou" path="res://scenes/Player.tscn" id="2_7g83o"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d3cuhgg1md1ch" path="res://assets/tileset_wall_simple.png" id="6_o8fc1"]
 [ext_resource type="Texture2D" uid="uid://1hpuxfgcnh3h" path="res://assets/tileset_interior_floor.png" id="7_xo05s"]
 [ext_resource type="PackedScene" uid="uid://t4167y1mulk5" path="res://scenes/Nigakiller.tscn" id="11_e3hyu"]
+[ext_resource type="Script" uid="uid://bv5ac6usy2fwt" path="res://scenes/CottonSpawner.cs" id="12_7c4bj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dss4m"]
 texture = ExtResource("2_w7kh3")
@@ -1454,34 +1455,71 @@ layer_1/tile_data = PackedInt32Array(-589816, 720900, 0, -589820, 4, 0, -1441789
 zoom = Vector2(3, 3)
 
 [node name="Cotton" parent="." instance=ExtResource("3_7g83o")]
-position = Vector2(77, -4)
-
-[node name="Cotton2" parent="." instance=ExtResource("3_7g83o")]
-position = Vector2(90, 63)
-
-[node name="Cotton3" parent="." instance=ExtResource("3_7g83o")]
-position = Vector2(-46, 168)
-
-[node name="Cotton4" parent="." instance=ExtResource("3_7g83o")]
-position = Vector2(129, 162)
-
-[node name="Cotton5" parent="." instance=ExtResource("3_7g83o")]
-position = Vector2(328, 72)
-
-[node name="Cotton6" parent="." instance=ExtResource("3_7g83o")]
-position = Vector2(88, -186)
-
-[node name="Cotton8" parent="." instance=ExtResource("3_7g83o")]
-position = Vector2(-93, -116)
-
-[node name="Cotton9" parent="." instance=ExtResource("3_7g83o")]
-position = Vector2(-122, -25)
-
-[node name="Cotton7" parent="." instance=ExtResource("3_7g83o")]
-position = Vector2(401, -104)
+position = Vector2(-1, -45)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("4_d1c63")]
 
 [node name="NPC" parent="." instance=ExtResource("11_e3hyu")]
 Speed = 100.0
 AttackCooldown = 3.0
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="Markers"]
+position = Vector2(335, 75)
+
+[node name="Marker2D2" type="Marker2D" parent="Markers"]
+position = Vector2(404, -101)
+
+[node name="Marker2D3" type="Marker2D" parent="Markers"]
+position = Vector2(-121, -133)
+
+[node name="Marker2D4" type="Marker2D" parent="Markers"]
+position = Vector2(-22, 196)
+
+[node name="Marker2D5" type="Marker2D" parent="Markers"]
+position = Vector2(85, -194)
+
+[node name="Marker2D6" type="Marker2D" parent="Markers"]
+position = Vector2(280, -173)
+
+[node name="Marker2D7" type="Marker2D" parent="Markers"]
+position = Vector2(241, 2)
+
+[node name="Marker2D8" type="Marker2D" parent="Markers"]
+position = Vector2(107, 145)
+
+[node name="Marker2D9" type="Marker2D" parent="Markers"]
+position = Vector2(81, 20)
+
+[node name="Marker2D10" type="Marker2D" parent="Markers"]
+position = Vector2(-65, 72)
+
+[node name="Marker2D11" type="Marker2D" parent="Markers"]
+position = Vector2(-65, 72)
+
+[node name="Marker2D12" type="Marker2D" parent="Markers"]
+position = Vector2(220, 110)
+
+[node name="Marker2D13" type="Marker2D" parent="Markers"]
+position = Vector2(-11, -185)
+
+[node name="Marker2D14" type="Marker2D" parent="Markers"]
+position = Vector2(176, -96)
+
+[node name="Marker2D15" type="Marker2D" parent="Markers"]
+position = Vector2(24, -77)
+
+[node name="Marker2D16" type="Marker2D" parent="Markers"]
+position = Vector2(16, 126)
+
+[node name="Marker2D17" type="Marker2D" parent="Markers"]
+position = Vector2(126, 237)
+
+[node name="Marker2D18" type="Marker2D" parent="Markers"]
+position = Vector2(-174, -20)
+
+[node name="CottonSpawner" type="Node2D" parent="."]
+script = ExtResource("12_7c4bj")
+CottonScene = ExtResource("3_7g83o")
+MarkersPath = NodePath("../Markers")
