@@ -4,11 +4,16 @@ public partial class StopwatchHUD : CanvasLayer
 {
     private float _timeElapsed = 0f;
     private bool _running = true;
-    private Label _label;
+
+    private Label _stopwatchLabel;
+    private Label _hpLabel;
 
     public override void _Ready()
     {
-        _label = GetNode<Label>("StopwatchLabel");
+        _stopwatchLabel = GetNode<Label>("StopwatchLabel");
+        _hpLabel = GetNode<Label>("HpLabel");
+
+        UpdateHp(3); // optional default value
     }
 
     public override void _Process(double delta)
@@ -16,7 +21,7 @@ public partial class StopwatchHUD : CanvasLayer
         if (_running)
         {
             _timeElapsed += (float)delta;
-            _label.Text = FormatTime(_timeElapsed);
+            _stopwatchLabel.Text = FormatTime(_timeElapsed);
         }
     }
 
@@ -32,5 +37,11 @@ public partial class StopwatchHUD : CanvasLayer
     public void Stop()
     {
         _running = false;
+    }
+
+    // 👇 HP update function
+    public void UpdateHp(int currentHp)
+    {
+        _hpLabel.Text = $"HP: {currentHp}";
     }
 }

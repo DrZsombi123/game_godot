@@ -1457,7 +1457,11 @@ zoom = Vector2(3, 3)
 [node name="Cotton" parent="." instance=ExtResource("3_7g83o")]
 position = Vector2(-1, -45)
 
-[node name="CanvasLayer" parent="." instance=ExtResource("4_d1c63")]
+[node name="Cotton2" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(186, -145)
+
+[node name="Cotton3" parent="." instance=ExtResource("3_7g83o")]
+position = Vector2(381, -64)
 
 [node name="NPC" parent="." instance=ExtResource("11_e3hyu")]
 Speed = 100.0
@@ -1489,6 +1493,9 @@ position = Vector2(241, 2)
 [node name="Marker2D8" type="Marker2D" parent="Markers"]
 position = Vector2(107, 145)
 
+[node name="Marker2D25" type="Marker2D" parent="Markers"]
+position = Vector2(207, 162)
+
 [node name="Marker2D9" type="Marker2D" parent="Markers"]
 position = Vector2(81, 20)
 
@@ -1500,6 +1507,9 @@ position = Vector2(-65, 72)
 
 [node name="Marker2D12" type="Marker2D" parent="Markers"]
 position = Vector2(220, 110)
+
+[node name="Marker2D24" type="Marker2D" parent="Markers"]
+position = Vector2(200, 52)
 
 [node name="Marker2D13" type="Marker2D" parent="Markers"]
 position = Vector2(-11, -185)
@@ -1519,7 +1529,24 @@ position = Vector2(126, 237)
 [node name="Marker2D18" type="Marker2D" parent="Markers"]
 position = Vector2(-174, -20)
 
+[node name="Marker2D19" type="Marker2D" parent="Markers"]
+position = Vector2(10, -113)
+
+[node name="Marker2D20" type="Marker2D" parent="Markers"]
+position = Vector2(302, -54)
+
+[node name="Marker2D21" type="Marker2D" parent="Markers"]
+position = Vector2(150, -282)
+
+[node name="Marker2D22" type="Marker2D" parent="Markers"]
+position = Vector2(270, -228)
+
+[node name="Marker2D23" type="Marker2D" parent="Markers"]
+position = Vector2(-108, -67)
+
 [node name="CottonSpawner" type="Node2D" parent="."]
 script = ExtResource("12_7c4bj")
 CottonScene = ExtResource("3_7g83o")
 MarkersPath = NodePath("../Markers")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_d1c63")]

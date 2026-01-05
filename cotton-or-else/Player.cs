@@ -89,6 +89,7 @@ public partial class Player : CharacterBody2D
 		CurrentHP -= amount;
 		CurrentHP = Mathf.Max(CurrentHP, 0);
 
+		GetTree().CallGroup("hud", "UpdateHp", CurrentHP);
 		GD.Print("Player HP:", CurrentHP);
 
 		if (CurrentHP <= 0)

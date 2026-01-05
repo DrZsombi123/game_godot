@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://c8jnr3e1id2sk"
-path="res://.godot/imported/wakawaka.wav-b1625a91826ffedee34ae3dc2f2d39ad.sample"
+uid="uid://beutamco7sco5"
+path="res://.godot/imported/wakawaka.WAV-4cb75be3f6a8c546a343d53810423a30.sample"
 
 [deps]
 
-source_file="res://assets/wakawaka.wav"
-dest_files=["res://.godot/imported/wakawaka.wav-b1625a91826ffedee34ae3dc2f2d39ad.sample"]
+source_file="res://assets/wakawaka.WAV"
+dest_files=["res://.godot/imported/wakawaka.WAV-4cb75be3f6a8c546a343d53810423a30.sample"]
 
 [params]
 
