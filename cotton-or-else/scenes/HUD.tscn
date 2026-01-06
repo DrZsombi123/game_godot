@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://lqanuj7fo1am"]
+[gd_scene load_steps=5 format=3 uid="uid://lqanuj7fo1am"]
 
 [ext_resource type="Script" uid="uid://cdo8qy1ukbko8" path="res://StopwatchHUD.cs" id="1_qpvh6"]
 [ext_resource type="FontFile" uid="uid://dl54sk3b5fbq6" path="res://assets/GrapeSoda.ttf" id="2_fls4u"]
+[ext_resource type="Script" uid="uid://biak7lxnl6tb4" path="res://scenes/CottonLabel.cs" id="3_1etfg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fls4u"]
 bg_color = Color(0, 0, 0, 0.5686275)
@@ -16,8 +17,8 @@ script = ExtResource("1_qpvh6")
 [node name="Panel" type="Panel" parent="."]
 offset_left = -1.0
 offset_top = -1.0
-offset_right = 140.0
-offset_bottom = 76.0
+offset_right = 192.0
+offset_bottom = 108.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fls4u")
 
 [node name="StopwatchLabel" type="Label" parent="."]
@@ -42,3 +43,14 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_fls4u")
 theme_override_font_sizes/font_size = 35
+
+[node name="CottonLabel" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 50.0
+offset_bottom = 109.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fls4u")
+theme_override_font_sizes/font_size = 35
+script = ExtResource("3_1etfg")

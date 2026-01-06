@@ -15,8 +15,9 @@ public partial class GameEvents : Node
 
     public void EmitCottonPicked()
     {
-        EmitSignal(SignalName.CottonPicked);
         TotalCottonPicked++;
+        EmitSignal(SignalName.CottonPicked);
+        
         GD.Print(TotalCottonPicked);
     }
 }
