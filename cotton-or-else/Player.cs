@@ -101,6 +101,8 @@ public partial class Player : CharacterBody2D
 	private void Die()
 	{
 		GD.Print("Player died");
-		
+		GetTree().CallGroup("hud", "Stop");
+
+		GetTree().ChangeSceneToFile("res://scenes/DeathScreen.tscn");
 	}
 }

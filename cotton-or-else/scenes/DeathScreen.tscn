@@ -1,0 +1,123 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdkv7p154tsom"]
+
+[ext_resource type="Script" uid="uid://c8dwq1icvpopn" path="res://scenes/DeathScreen.cs" id="1_5034k"]
+[ext_resource type="Texture2D" uid="uid://ctn7nsdkiptrc" path="res://assets/deathscreen.jpg" id="1_biyii"]
+[ext_resource type="FontFile" uid="uid://dl54sk3b5fbq6" path="res://assets/GrapeSoda.ttf" id="3_0r1s6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5034k"]
+texture = ExtResource("1_biyii")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rg777"]
+bg_color = Color(0, 0, 0, 0.59607846)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0r1s6"]
+bg_color = Color(0.60970306, 0.5553966, 0.304349, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sroce"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="DeathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5034k")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5034k")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -220.0
+offset_right = 275.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rg777")
+
+[node name="TimeLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -144.0
+offset_right = 20.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_0r1s6")
+theme_override_font_sizes/font_size = 50
+
+[node name="CottonLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -44.0
+offset_right = 20.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_0r1s6")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.5
+offset_top = -93.0
+offset_right = 104.5
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_0r1s6")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_0r1s6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sroce")
+text = "Exit"
+
+[connection signal="pressed" from="Button3" to="." method="OnExitPressed"]

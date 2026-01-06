@@ -37,6 +37,7 @@ public partial class StopwatchHUD : CanvasLayer
     public void Stop()
     {
         _running = false;
+        GameEvents.Instance.TimeSurvived = _timeElapsed;
     }
 
     // 👇 HP update function

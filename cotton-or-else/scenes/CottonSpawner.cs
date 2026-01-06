@@ -22,7 +22,7 @@ public partial class CottonSpawner : Node2D
     {
         while (true)
         {
-            float waitTime = _rng.RandfRange(5f, 15f);
+            float waitTime = _rng.RandfRange(5f, 10f);
             await ToSignal(GetTree().CreateTimer(waitTime), "timeout");
 
             TrySpawnCotton();
