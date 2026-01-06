@@ -24,7 +24,7 @@ public partial class MainMenu : Control
     {
 		
 		
-        GetTree().ChangeSceneToFile("res://scenes/world.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/World.tscn");
 		
     }
 
