@@ -19,10 +19,19 @@ config/icon="res://icon.svg"
 
 MusicManager="*res://scenes/MusicManager.tscn"
 GameEvents="*res://GameEvents.cs"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[dialogue_manager]
+
+runtime/advanced/uses_dotnet=true
 
 [dotnet]
 
 project/assembly_name="Cotton Or Else"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 
@@ -46,6 +55,10 @@ balra={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://kezdes.dialogue")
 
 [rendering]
 

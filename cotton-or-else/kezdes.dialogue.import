@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://xspcx1ep5qip"
+path="res://.godot/imported/kezdes.dialogue-59e1f09c41aea695daa95bc9ab04cf4c.tres"
+
+[deps]
+
+source_file="res://kezdes.dialogue"
+dest_files=["res://.godot/imported/kezdes.dialogue-59e1f09c41aea695daa95bc9ab04cf4c.tres"]
+
+[params]
+
+defaults=true
