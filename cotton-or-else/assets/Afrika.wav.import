@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bq00o08yk6rh"
-path="res://.godot/imported/Afrika.WAV-8778e0e66aaa97e9ac35f5a58c4c8a38.sample"
+path="res://.godot/imported/Afrika.wav-30ea98c246ba7290c1e776f6e4082fd9.sample"
 
 [deps]
 
-source_file="res://assets/Afrika.WAV"
-dest_files=["res://.godot/imported/Afrika.WAV-8778e0e66aaa97e9ac35f5a58c4c8a38.sample"]
+source_file="res://assets/Afrika.wav"
+dest_files=["res://.godot/imported/Afrika.wav-30ea98c246ba7290c1e776f6e4082fd9.sample"]
 
 [params]
 

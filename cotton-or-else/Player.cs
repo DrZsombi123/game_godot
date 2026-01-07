@@ -4,7 +4,7 @@ using Godot;
 public partial class Player : CharacterBody2D
 {
 	[Export]private float MoveSpeed = 100f;
-	[Export] public int MaxHP = 3;
+	[Export] public int MaxHP = 10;
 
 	public int CurrentHP { get; private set; }
 
