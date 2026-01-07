@@ -1,8 +1,11 @@
 using Godot;
 using System;
+using DialogueManagerRuntime;
+
 
 public partial class GameEvents : Node
 {
+    
     public static GameEvents Instance { get; private set; }
     public int TotalCottonPicked = 0;
     public float TimeSurvived = 0f;
