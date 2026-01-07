@@ -24,6 +24,7 @@ public partial class Game : Node2D
 		MusicManager mm = (MusicManager)GetNode("/root/MusicManager");
     	mm.PlaySelectedMusic();
 		Nigakiller.dialogueend = true;
+		GetTree().CallGroup("hud", "StartTimer");
 	}
 
 }

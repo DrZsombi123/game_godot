@@ -3,7 +3,7 @@ using Godot;
 public partial class StopwatchHUD : CanvasLayer
 {
     private float _timeElapsed = 0f;
-    private bool _running = true;
+    private bool _running = false;
 
     private Label _stopwatchLabel;
     private Label _hpLabel;
@@ -34,6 +34,11 @@ public partial class StopwatchHUD : CanvasLayer
         return $"{minutes:00}:{secs:00}.{ms:00}";
     }
 
+    public void StartTimer()
+    {
+        _timeElapsed = 0f;
+        _running = true;
+    }
     public void Stop()
     {
         _running = false;
