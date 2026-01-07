@@ -9,7 +9,11 @@ public partial class Game : Node2D
 	[Export] PackedScene endscene;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
-{;
+{
+	var player = GetTree().GetFirstNodeInGroup("Player") as Player;
+	player?.DisableMovement();
+
+	
 	DialogueManager.DialogueEnded += OnDialogueEnded;
 	DialogueManager.ShowDialogueBalloon(Dialogue,"start");
     
@@ -20,6 +24,9 @@ public partial class Game : Node2D
 	}
 	private void OnDialogueEnded(Resource dialogue)
 	{
+		var player = GetTree().GetFirstNodeInGroup("Player") as Player;
+		player?.EnableMovement();
+
 		DialogueManager.DialogueEnded -= OnDialogueEnded;
 		MusicManager mm = (MusicManager)GetNode("/root/MusicManager");
     	mm.PlaySelectedMusic();

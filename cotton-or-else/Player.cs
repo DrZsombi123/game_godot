@@ -11,7 +11,7 @@ public partial class Player : CharacterBody2D
 	private AnimatedSprite2D animatedsprite;
 
 	public bool HasKey = false;
-
+	public bool CanMove { get; private set; } = false;
 	public override void _Ready()
 	{
 		animatedsprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
@@ -41,8 +41,24 @@ public partial class Player : CharacterBody2D
 		}
 	}
 
+	public void EnableMovement()
+	{
+		CanMove = true;
+	}
+
+	public void DisableMovement()
+	{
+		CanMove = false;
+		Velocity = Vector2.Zero;
+		animatedsprite.Stop();
+	}
+
 	private void GetInput()
 	{
+
+		if (!CanMove)
+			return;
+
 		Vector2 inputDirection = Vector2.Zero;
 		//jobbra
 		if (Input.IsActionPressed("jobbra"))
