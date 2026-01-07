@@ -12,6 +12,7 @@ public partial class Nigakiller : CharacterBody2D
     [Export] public int Damage = 1;
 
     private bool _damageDealtThisAttack = false;
+    public static bool dialogueend = false;
     private CharacterBody2D _player;
     private AnimatedSprite2D _sprite;
 
@@ -70,9 +71,9 @@ public partial class Nigakiller : CharacterBody2D
         PlayIdleAnimation();
         return;
     }
-
+    if (dialogueend){
     FollowPlayer(toPlayer);
-    }
+    }}
     private bool _canPunish = false;
     private bool CanAttack(float distance)
     {
