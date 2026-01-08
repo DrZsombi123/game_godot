@@ -1952,6 +1952,9 @@ position = Vector2(302, -54)
 [node name="Marker2D21" type="Marker2D" parent="Markers"]
 position = Vector2(150, -282)
 
+[node name="Marker2D26" type="Marker2D" parent="Markers"]
+position = Vector2(74, -235)
+
 [node name="Marker2D22" type="Marker2D" parent="Markers"]
 position = Vector2(270, -228)
 

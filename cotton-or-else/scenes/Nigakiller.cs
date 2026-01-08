@@ -6,8 +6,8 @@ public partial class Nigakiller : CharacterBody2D
     [Export] public float Speed = 80f;
     [Export] public float StopDistance = 18f;
     [Export] public float AttackDistance = 48f;
-    [Export] public float TimeBeforeAttack = 10f;
-    [Export] public float AttackCooldown = 1.2f;
+    [Export] public float TimeBeforeAttack = 15f;
+    [Export] public float AttackCooldown = 1.8f;
     [Export] public float AttackDuration = 0.4f;
     [Export] public int Damage = 1;
 
@@ -39,11 +39,11 @@ public partial class Nigakiller : CharacterBody2D
     {
         float d = (float)delta;
 
-    // Count ONLY when not attacking
+    
     if (!_isAttacking)
         _timeSinceCotton += d;
 
-    // Unlock punishment AFTER full wait
+    
     if (_timeSinceCotton >= TimeBeforeAttack)
         _canPunish = true;
 
@@ -58,7 +58,7 @@ public partial class Nigakiller : CharacterBody2D
     Vector2 toPlayer = _player.GlobalPosition - GlobalPosition;
     float distance = toPlayer.Length();
 
-    // Never attack unless explicitly allowed
+    
     if (_canPunish && CanAttack(distance))
     {
         StartAttack(toPlayer);
