@@ -1,6 +1,6 @@
 ~ start
-Inspector: Hi your job is to pick cottton around the map.
-Inspector: They are spread throughout the map and keep an eye out for the new ones appereing.
-Inspector: You will constantly have to be on your toes picking cotton because im going to be following you.
+Inspector: Your job is to pick cotton around the map.
+Inspector: The cotton is spread throughout the area, and you should keep an eye out for new patches as they appear.
+Inspector: You’ll need to stay on your toes while picking cotton, because I’ll be following you.
 - Get to work
 	=> END

@@ -13,7 +13,7 @@ public partial class StopwatchHUD : CanvasLayer
         _stopwatchLabel = GetNode<Label>("StopwatchLabel");
         _hpLabel = GetNode<Label>("HpLabel");
 
-        UpdateHp(9); // optional default value
+        UpdateHp(10);
     }
 
     public override void _Process(double delta)
